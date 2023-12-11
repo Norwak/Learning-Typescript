@@ -23,3 +23,16 @@ const throwError = (message: string): void|never => {
     throw new Error(message);
   }
 }
+
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny'
+}
+
+// Destructuring
+const logWeather = ({date, weather}: {date: Date, weather: string}): void => {
+  console.log(date);
+  console.log(weather);
+}
+
+logWeather(todaysWeather);
